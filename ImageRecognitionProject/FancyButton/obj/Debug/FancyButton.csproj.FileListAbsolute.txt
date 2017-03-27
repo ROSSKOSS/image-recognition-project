@@ -1,0 +1,12 @@
+c:\users\user\documents\visual studio 2015\Projects\ProjectOR\FancyButton\bin\Debug\FancyButton.dll
+c:\users\user\documents\visual studio 2015\Projects\ProjectOR\FancyButton\bin\Debug\FancyButton.pdb
+c:\users\user\documents\visual studio 2015\Projects\ProjectOR\FancyButton\obj\Debug\FancyButton.csprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2015\Projects\ProjectOR\FancyButton\obj\Debug\FancyButton_MarkupCompile.cache
+c:\users\user\documents\visual studio 2015\Projects\ProjectOR\FancyButton\obj\Debug\FancyButton_MarkupCompile.lref
+c:\users\user\documents\visual studio 2015\Projects\ProjectOR\FancyButton\obj\Debug\FancyButton.g.resources
+c:\users\user\documents\visual studio 2015\Projects\ProjectOR\FancyButton\obj\Debug\FancyButton.Properties.Resources.resources
+c:\users\user\documents\visual studio 2015\Projects\ProjectOR\FancyButton\obj\Debug\FancyButton.csproj.GenerateResource.Cache
+c:\users\user\documents\visual studio 2015\Projects\ProjectOR\FancyButton\obj\Debug\FancyButton.dll
+c:\users\user\documents\visual studio 2015\Projects\ProjectOR\FancyButton\obj\Debug\FancyButton.pdb
+c:\users\user\documents\visual studio 2015\Projects\ProjectOR\FancyButton\obj\Debug\FancyButton.g.cs
+C:\Users\User\documents\visual studio 2015\Projects\ProjectOR\FancyButton\obj\Debug\FancyButton.baml

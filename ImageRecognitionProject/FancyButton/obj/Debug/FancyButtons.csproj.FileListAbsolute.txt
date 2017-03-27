@@ -1,0 +1,5 @@
+C:\Users\User\documents\visual studio 2015\Projects\ProjectOR\FancyButton\obj\Debug\FancyButton.g.cs
+C:\Users\User\documents\visual studio 2015\Projects\ProjectOR\FancyButton\obj\Debug\FancyButton_MarkupCompile.cache
+C:\Users\User\documents\visual studio 2015\Projects\ProjectOR\FancyButton\obj\Debug\FancyButton_MarkupCompile.lref
+C:\Users\User\documents\visual studio 2015\Projects\ProjectOR\FancyButton\obj\Debug\FancyButton.dll
+C:\Users\User\documents\visual studio 2015\Projects\ProjectOR\FancyButton\obj\Debug\FancyButton.pdb

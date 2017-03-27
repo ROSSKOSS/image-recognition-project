@@ -1,0 +1,5 @@
+C:\Users\User\documents\visual studio 2015\Projects\ProjectOR\Utilities\bin\Debug\Utilities.dll
+C:\Users\User\documents\visual studio 2015\Projects\ProjectOR\Utilities\bin\Debug\Utilities.pdb
+C:\Users\User\documents\visual studio 2015\Projects\ProjectOR\Utilities\obj\Debug\Utilities.dll
+C:\Users\User\documents\visual studio 2015\Projects\ProjectOR\Utilities\obj\Debug\Utilities.pdb
+C:\Users\User\documents\visual studio 2015\Projects\ProjectOR\Utilities\obj\Debug\Utilities.csprojResolveAssemblyReference.cache
