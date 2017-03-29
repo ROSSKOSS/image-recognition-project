@@ -143,7 +143,6 @@ namespace UIElements
 
                 TextAlignment = TextAlignment.Center,
 
-                Margin = new Thickness(5, 1, 5, 1),
                 FontSize = TextSize,
                 FontFamily = new FontFamily("Malgun Gothic Semilight")
             };

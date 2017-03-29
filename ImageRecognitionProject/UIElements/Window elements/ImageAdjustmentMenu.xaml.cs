@@ -12,6 +12,8 @@ namespace UIElements
     ///
     public partial class ImageAdjustmentMenu : UserControl
     {
+        public Button ResetButton { get; set; }
+        public Button ApplyButton { get; set; }
         public ImageSource TitleLogo { get; set; }
         public StackPanel Host { get; set; }
         public string TitleText { get; set; }
@@ -25,6 +27,8 @@ namespace UIElements
             titleLabel.Content = TitleText;
             image.Source = TitleLogo;
             Host = host;
+            AddApplyButton();
+            AddResetButton();
             OutroAnimation = new DoubleAnimation();
             DoIntroAnimation();
             Margin = new Thickness(9, 10, 9, 10);
@@ -35,7 +39,7 @@ namespace UIElements
             DoubleAnimation da = new DoubleAnimation();
             da.From = -300;
             da.To = 0;
-
+            AddApplyButton();
             da.DecelerationRatio = 0.9;
             da.Duration = new Duration(TimeSpan.FromSeconds(0.3));
             TranslateTransform tr = new TranslateTransform();
@@ -54,5 +58,25 @@ namespace UIElements
             this.RenderTransform = tr;
             tr.BeginAnimation(TranslateTransform.XProperty, OutroAnimation);
         }
+
+        private void AddApplyButton()
+        {
+            ApplyButton = new Button(45, 20, 5, 5, "Apply", 13, "#FF0288D1",
+                "#4fc3f7", "#0277bd", "#FFFFFFFF", "#FF000000", "#FFFFFFFF")
+            {
+                HorizontalAlignment = HorizontalAlignment.Left
+            };
+            applyButtonGrid.Children.Add(ApplyButton);
+        }
+        private void AddResetButton()
+        {
+            ResetButton = new Button(45, 20, 5, 5, "Reset", 13, "#FF0288D1",
+                "#4fc3f7", "#0277bd", "#FFFFFFFF", "#FF000000", "#FFFFFFFF")
+            {
+                HorizontalAlignment = HorizontalAlignment.Left
+            };
+            resetButtonGrid.Children.Add(ResetButton);
+        }
     }
 }
+

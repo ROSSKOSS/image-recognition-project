@@ -47,6 +47,15 @@
                     <Image x:Name="imageDetailedView" Height="406" />
                 </ScrollViewer>
             </Grid>
+            <ScrollViewer x:Name="logBody" Grid.Row="1" Margin="0,0,0,10" Visibility="Hidden">
+                <RichTextBox x:Name="log" FontSize="16" BorderThickness="0" Block.LineHeight="3">
+                    <FlowDocument>
+                        <Paragraph>
+                            <Run Text="RichTextBox"/>
+                        </Paragraph>
+                    </FlowDocument>
+                </RichTextBox>
+            </ScrollViewer>
         </Grid>
         <Grid Height="23" VerticalAlignment="Top" Grid.ColumnSpan="2">
             <StackPanel x:Name="menuBar" Height="30" VerticalAlignment="Top" Background="#FF0288D1" Orientation="Horizontal" Margin="0,0,0,-7" />

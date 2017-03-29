@@ -22,3 +22,27 @@ C:\Users\User\documents\visual studio 2015\Projects\ProjectOR\UIElements\obj\Deb
 C:\Users\User\documents\visual studio 2015\Projects\ProjectOR\UIElements\obj\Debug\Trigger.g.cs
 C:\Users\User\documents\visual studio 2015\Projects\ProjectOR\UIElements\obj\Debug\BlackAndWhiteControl.baml
 C:\Users\User\documents\visual studio 2015\Projects\ProjectOR\UIElements\obj\Debug\Trigger.baml
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\bin\Debug\UIElements.dll
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\bin\Debug\UIElements.pdb
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\bin\Debug\Utilities.dll
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\bin\Debug\Utilities.pdb
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\obj\Debug\UIElements.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\obj\Debug\UIElements_MarkupCompile.cache
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\obj\Debug\UIElements_MarkupCompile.lref
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\obj\Debug\UIElements.g.resources
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\obj\Debug\UIElements.Resource.resources
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\obj\Debug\UIElements.csproj.GenerateResource.Cache
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\obj\Debug\UIElements.dll
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\obj\Debug\UIElements.pdb
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\obj\Debug\Controls\AdjustmentControl.g.cs
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\obj\Debug\Controls\BlackAndWhiteControl.g.cs
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\obj\Debug\Controls\AdjustmentControl.baml
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\obj\Debug\Controls\BlackAndWhiteControl.baml
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\obj\Debug\Window elements\ImageAdjustmentMenu.g.cs
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\obj\Debug\Window elements\ContextMenu.g.cs
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\obj\Debug\Window elements\ImageDisplay.g.cs
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\obj\Debug\Controls\Trigger.g.cs
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\obj\Debug\Window elements\ImageAdjustmentMenu.baml
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\obj\Debug\Window elements\ContextMenu.baml
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\obj\Debug\Window elements\ImageDisplay.baml
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\obj\Debug\Controls\Trigger.baml

@@ -3,3 +3,8 @@ C:\Users\User\documents\visual studio 2015\Projects\ProjectOR\Utilities\bin\Debu
 C:\Users\User\documents\visual studio 2015\Projects\ProjectOR\Utilities\obj\Debug\Utilities.dll
 C:\Users\User\documents\visual studio 2015\Projects\ProjectOR\Utilities\obj\Debug\Utilities.pdb
 C:\Users\User\documents\visual studio 2015\Projects\ProjectOR\Utilities\obj\Debug\Utilities.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\Utilities\bin\Debug\Utilities.dll
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\Utilities\bin\Debug\Utilities.pdb
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\Utilities\obj\Debug\Utilities.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\Utilities\obj\Debug\Utilities.dll
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\Utilities\obj\Debug\Utilities.pdb

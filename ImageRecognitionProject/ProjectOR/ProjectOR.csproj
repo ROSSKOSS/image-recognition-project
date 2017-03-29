@@ -97,8 +97,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\BitmapManip\FileOpener\FileOpener.csproj">
-      <Project>{F546EE43-F214-41C0-84FD-1A3C0A10724A}</Project>
+    <ProjectReference Include="..\..\..\..\Visual Studio 2015\Projects\BitmapManip\FileOpener\FileOpener.csproj">
+      <Project>{f546ee43-f214-41c0-84fd-1a3c0a10724a}</Project>
       <Name>FileOpener</Name>
     </ProjectReference>
     <ProjectReference Include="..\UIElements\UIElements.csproj">

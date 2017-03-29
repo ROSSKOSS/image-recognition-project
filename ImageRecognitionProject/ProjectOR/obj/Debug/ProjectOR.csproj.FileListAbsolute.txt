@@ -17,3 +17,22 @@ C:\Users\User\documents\visual studio 2015\Projects\ProjectOR\ProjectOR\bin\Debu
 C:\Users\User\documents\visual studio 2015\Projects\ProjectOR\ProjectOR\bin\Debug\FileOpener.pdb
 C:\Users\User\documents\visual studio 2015\Projects\ProjectOR\ProjectOR\bin\Debug\Utilities.dll
 C:\Users\User\documents\visual studio 2015\Projects\ProjectOR\ProjectOR\bin\Debug\Utilities.pdb
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\ProjectOR.exe.config
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\obj\Debug\ProjectOR.exe
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\obj\Debug\ProjectOR.pdb
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\ProjectOR.exe
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\ProjectOR.pdb
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\FileOpener.dll
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\UIElements.dll
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\Utilities.dll
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\FileOpener.pdb
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\UIElements.pdb
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\Utilities.pdb
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\obj\Debug\ProjectOR.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\obj\Debug\MainWindow.baml
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\obj\Debug\MainWindow.g.cs
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\obj\Debug\App.g.cs
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\obj\Debug\ProjectOR_MarkupCompile.cache
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\obj\Debug\ProjectOR.g.resources
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\obj\Debug\ProjectOR.Properties.Resources.resources
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\obj\Debug\ProjectOR.csproj.GenerateResource.Cache

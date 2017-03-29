@@ -21,26 +21,33 @@ namespace UIElements
     public partial class Trigger : UserControl
     {
         private bool _on;
+
+        public bool State
+        {
+            get { return _on; }
+            set { _on = value; }
+        }
+
         public Trigger()
         {
             InitializeComponent();
-            _on = false;
+            State = false;
             Margin = new Thickness(10, 35, 10, 10);
         }
 
         private void UserControl_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            if (_on)
+            if (State)
             {
                 button.HorizontalAlignment = HorizontalAlignment.Left;
                 body.Fill = (Brush)new BrushConverter().ConvertFrom("#FF0277BD");
-                _on = false;
+                State = false;
             }
-            else if (!_on)
+            else if (!State)
             {
                 button.HorizontalAlignment = HorizontalAlignment.Right;
                 body.Fill = (Brush)new BrushConverter().ConvertFrom("#FFB3E5FC");
-                _on = true;
+                State = true;
             }
         }
     }

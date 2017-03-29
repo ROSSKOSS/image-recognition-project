@@ -45,20 +45,20 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdjustmentControl.xaml.cs">
+    <Compile Include="Controls\AdjustmentControl.xaml.cs">
       <DependentUpon>AdjustmentControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BlackAndWhiteControl.xaml.cs">
+    <Compile Include="Controls\BlackAndWhiteControl.xaml.cs">
       <DependentUpon>BlackAndWhiteControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ImageAdjustmentMenu.xaml.cs">
+    <Compile Include="Window elements\ImageAdjustmentMenu.xaml.cs">
       <DependentUpon>ImageAdjustmentMenu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Button.cs" />
-    <Compile Include="ContextMenu.xaml.cs">
+    <Compile Include="Controls\Button.cs" />
+    <Compile Include="Window elements\ContextMenu.xaml.cs">
       <DependentUpon>ContextMenu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ImageDisplay.xaml.cs">
+    <Compile Include="Window elements\ImageDisplay.xaml.cs">
       <DependentUpon>ImageDisplay.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -67,32 +67,32 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource.resx</DependentUpon>
     </Compile>
-    <Compile Include="Trigger.xaml.cs">
+    <Compile Include="Controls\Trigger.xaml.cs">
       <DependentUpon>Trigger.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="AdjustmentControl.xaml">
+    <Page Include="Controls\AdjustmentControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="BlackAndWhiteControl.xaml">
+    <Page Include="Controls\BlackAndWhiteControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ImageAdjustmentMenu.xaml">
+    <Page Include="Window elements\ImageAdjustmentMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ContextMenu.xaml">
+    <Page Include="Window elements\ContextMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ImageDisplay.xaml">
+    <Page Include="Window elements\ImageDisplay.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Trigger.xaml">
+    <Page Include="Controls\Trigger.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
