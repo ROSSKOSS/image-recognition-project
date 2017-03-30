@@ -8,12 +8,15 @@ using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using Emgu.CV.UI;
 using UIElements;
 using Utilities;
 using Utilities.Helpers;
 using Brush = System.Drawing.Brush;
 using Button = UIElements.Button;
 using ContextMenu = UIElements.ContextMenu;
+using Emgu.CV;
+using Emgu.CV.Structure;
 
 namespace ProjectOR
 {
@@ -105,26 +108,28 @@ namespace ProjectOR
             imageGrid.Children.Clear();
             adjustmentMenuHost.Children.Clear();
             imageDetailedView.Source = null;
-            try
-            {
+            //try
+            //
                 SetUpImageDisplay();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Image couldn't be set up.\nOriginal error:" + ex.Message);
-                return;
-            }
+           // }
+           // catch (Exception ex)
+            //{
+               // MessageBox.Show(" Image couldn't be set up.\nOriginal error:" + ex.Message);
+              //  return;
+           // }
             try
             {
                 SetUpAdjustmentMenu();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Adjustment menu has thrown an exception. Check your image and try again.\nOriginal error:" + ex.Message);
+                MessageBox.Show(" Adjustment menu has thrown an exception. Check your image and try again.\nOriginal error:" + ex.Message);
                 return;
             }
             label2.Content = null;
             _tempBitmap = _sourceImage;
+
+
         }
 
         #region Image display
@@ -133,6 +138,15 @@ namespace ProjectOR
         {
             Bitmap sourceBmp = BitmapOpener.Open();
             _logger.Report("> File located\n", LoggerColors.MiscProcessColor, FontWeights.Medium);
+            var element = new Image<Gray, Byte>(BitmapOpener.FilePath);
+
+            Bitmap kekBmp = BitmapOpener.Open();
+            var scene = new Image<Gray, Byte>(BitmapOpener.FilePath);
+
+
+            imageDetailedView.Source =
+                BitmapConverter.ToImageSource(FeatureMatching.FeatureMatcher.Match(element, scene));
+
 
             var titleSource = BitmapConverter.ToImageSource(Properties.Resources.titleLogo);
             var bodySource = BitmapConverter.ToImageSource(sourceBmp);
@@ -142,8 +156,11 @@ namespace ProjectOR
                 $"File path: {BitmapOpener.FilePath.Replace(@"\\", "/")}.\nWidth: {sourceBmp.Width}px.\nHeight: {sourceBmp.Height}px.\nPixel amount: {sourceBmp.Width * sourceBmp.Height}.",
                 titleSource, bodySource, exitSource)
             { Margin = new Thickness(0, 10, 0, 10) };
+
             _logger.Report("> Image loaded\n", LoggerColors.MiscProcessColor, FontWeights.Medium);
-            imageDetailedView.Source = BitmapConverter.ToImageSource(sourceBmp);
+
+          //  imageDetailedView.Source = BitmapConverter.ToImageSource(sourceBmp);
+
             imageDetailedView.Width = sourceBmp.Width;
             imageDetailedView.Height = sourceBmp.Height;
             _imgDisplay.MouseRightButtonUp += ImgDisplayRightMouseUp;
@@ -266,14 +283,14 @@ namespace ProjectOR
                 threadOne.RunWorkerCompleted += CollectColorsCompleted;
                 threadOne.RunWorkerAsync(_tempBitmap);
                 _logger.Report("> Collecting colors\n", LoggerColors.StartProcessColor, FontWeights.Medium);
-               
+
             }
-            else if(!_trigger.State)
+            else if (!_trigger.State)
             {
                 _logger.Report("> Revert\n", LoggerColors.MiscProcessColor, FontWeights.Medium);
-                
+
                 imageDetailedView.Source = BitmapConverter.ToImageSource(_sourceImage);
-               
+
             }
 
         }
@@ -281,15 +298,15 @@ namespace ProjectOR
         private void CollectColorsCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             var result = (List<System.Windows.Media.Color>)e.Result;
-                var model = new List<object> { _tempBitmap, result };
-                var threadOne = new BackgroundWorker();
-                threadOne.WorkerReportsProgress = true;
-                threadOne.WorkerSupportsCancellation = true;
-                threadOne.DoWork += new BitmapAdjustment().Binarize;
-                threadOne.ProgressChanged += BinarizeProgressChanged;
-                threadOne.RunWorkerCompleted += BinarizeWorkCompleted;
-                threadOne.RunWorkerAsync(model);
-          
+            var model = new List<object> { _tempBitmap, result };
+            var threadOne = new BackgroundWorker();
+            threadOne.WorkerReportsProgress = true;
+            threadOne.WorkerSupportsCancellation = true;
+            threadOne.DoWork += new BitmapAdjustment().Binarize;
+            threadOne.ProgressChanged += BinarizeProgressChanged;
+            threadOne.RunWorkerCompleted += BinarizeWorkCompleted;
+            threadOne.RunWorkerAsync(model);
+
 
         }
 

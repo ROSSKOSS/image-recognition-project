@@ -36,3 +36,15 @@ C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\Project
 C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\obj\Debug\ProjectOR.g.resources
 C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\obj\Debug\ProjectOR.Properties.Resources.resources
 C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\obj\Debug\ProjectOR.csproj.GenerateResource.Cache
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\box.png
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\box_in_scene.png
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\Emgu.CV.UI.dll
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\Example.FeatureMatching.exe
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\Emgu.CV.World.dll
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\ZedGraph.dll
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\Example.FeatureMatching.pdb
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\Emgu.CV.UI.xml
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\Emgu.CV.World.pdb
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\Emgu.CV.World.xml
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\ZedGraph.xml
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\zh-CN\ZedGraph.resources.dll

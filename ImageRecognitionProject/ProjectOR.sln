@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Util
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileOpener", "..\..\..\Visual Studio 2015\Projects\BitmapManip\FileOpener\FileOpener.csproj", "{F546EE43-F214-41C0-84FD-1A3C0A10724A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeatureMatching", "..\..\..\..\..\..\Emgu\emgucv-windesktop 3.1.0.2504\Emgu.CV.Example\FeatureMatching\FeatureMatching.csproj", "{56AFFD9E-A27E-43BA-AAB5-8FEED098384D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F546EE43-F214-41C0-84FD-1A3C0A10724A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F546EE43-F214-41C0-84FD-1A3C0A10724A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F546EE43-F214-41C0-84FD-1A3C0A10724A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56AFFD9E-A27E-43BA-AAB5-8FEED098384D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56AFFD9E-A27E-43BA-AAB5-8FEED098384D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56AFFD9E-A27E-43BA-AAB5-8FEED098384D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56AFFD9E-A27E-43BA-AAB5-8FEED098384D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

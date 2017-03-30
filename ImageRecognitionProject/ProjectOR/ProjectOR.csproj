@@ -35,6 +35,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Emgu.CV.UI">
+      <HintPath>..\..\..\..\..\..\..\Emgu\emgucv-windesktop 3.1.0.2504\bin\Emgu.CV.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.World, Version=3.1.0.2504, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Emgu\emgucv-windesktop 3.1.0.2504\bin\Emgu.CV.World.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -97,6 +104,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\..\Emgu\emgucv-windesktop 3.1.0.2504\Emgu.CV.Example\FeatureMatching\FeatureMatching.csproj">
+      <Project>{56affd9e-a27e-43ba-aab5-8feed098384d}</Project>
+      <Name>FeatureMatching</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\..\Visual Studio 2015\Projects\BitmapManip\FileOpener\FileOpener.csproj">
       <Project>{f546ee43-f214-41c0-84fd-1a3c0a10724a}</Project>
       <Name>FileOpener</Name>
