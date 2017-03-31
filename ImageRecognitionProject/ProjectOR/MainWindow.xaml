@@ -38,17 +38,16 @@
         <Grid x:Name="mainHost" Grid.Column="1" Grid.Row="1" Background="White" MouseUp="mainHost_MouseUp">
             <Grid.RowDefinitions>
                 <RowDefinition />
-                <RowDefinition Height="204" />
+                <RowDefinition x:Name="LogRow" Height="204" />
             </Grid.RowDefinitions>
-            <ProgressBar x:Name="progressBar" BorderBrush="{x:Null}" BorderThickness="0" Height="10" VerticalAlignment="Bottom" Grid.Row="1" />
             <Grid Background="#FF0277BD">
                 <Label x:Name="label2" Content="Nothing to display" Margin="0,0,0,0" Foreground="#FF03A9F4" HorizontalAlignment="Center" VerticalAlignment="Center" />
                 <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
                     <Image x:Name="imageDetailedView" Height="406" />
                 </ScrollViewer>
             </Grid>
-            <ScrollViewer x:Name="logBody" Grid.Row="1" Margin="0,0,0,10" Visibility="Hidden">
-                <RichTextBox x:Name="log" FontSize="16" BorderThickness="0" Block.LineHeight="3">
+            <ScrollViewer x:Name="logBody" Grid.Row="1" Visibility="Hidden" Background="#FF727272">
+                <RichTextBox x:Name="log" FontSize="12" BorderThickness="0" Block.LineHeight="2" Background="Black">
                     <FlowDocument>
                         <Paragraph>
                             <Run Text="RichTextBox"/>
@@ -60,6 +59,8 @@
         <Grid Height="23" VerticalAlignment="Top" Grid.ColumnSpan="2">
             <StackPanel x:Name="menuBar" Height="30" VerticalAlignment="Top" Background="#FF0288D1" Orientation="Horizontal" Margin="0,0,0,-7" />
         </Grid>
-        <Grid Grid.Row="2" Grid.ColumnSpan="2" Background="#FF0288D1" />
+        <Grid Grid.Row="2" Grid.ColumnSpan="2" Background="#FF0288D1" >
+            <ProgressBar x:Name="progressBar" BorderBrush="{x:Null}" BorderThickness="0" Height="10" VerticalAlignment="Bottom" Background="#FF0288D1" />
+        </Grid>
     </Grid>
 </Window>

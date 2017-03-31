@@ -24,7 +24,7 @@
         <Label x:Name="titleLabel" Content="Image adjustments" Margin="30,3,0,0" VerticalAlignment="Top" Padding="5,4,5,5" Height="25" Foreground="White" FontFamily="Malgun Gothic Semilight" />
         <Image x:Name="image" HorizontalAlignment="Left" Height="15" Margin="8,8,0,0" VerticalAlignment="Top" Width="15"  Stretch="UniformToFill" />
         <ScrollViewer Height="271" Grid.Row="1" VerticalAlignment="Top" VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2">
-            <StackPanel x:Name="host" Height="271" />
+            <WrapPanel x:Name="host"/>
         </ScrollViewer>
         <Grid x:Name="applyButtonGrid" Grid.Column="1" Margin="56,0,10,0"/>
         <Grid x:Name="resetButtonGrid" Grid.Column="1" Margin="5,0,61,0"/>

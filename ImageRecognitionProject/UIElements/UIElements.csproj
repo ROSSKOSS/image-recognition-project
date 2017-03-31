@@ -51,6 +51,7 @@
     <Compile Include="Controls\BlackAndWhiteControl.xaml.cs">
       <DependentUpon>BlackAndWhiteControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\TriggerButton.cs" />
     <Compile Include="Window elements\ImageAdjustmentMenu.xaml.cs">
       <DependentUpon>ImageAdjustmentMenu.xaml</DependentUpon>
     </Compile>

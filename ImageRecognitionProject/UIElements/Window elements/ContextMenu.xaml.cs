@@ -41,10 +41,10 @@ namespace UIElements
             da.To = 25 * pos;
 
             da.DecelerationRatio = 0.9;
-            da.Duration = new Duration(TimeSpan.FromMilliseconds(200));
+            da.Duration = new Duration(TimeSpan.FromMilliseconds(100));
             TranslateTransform tr = new TranslateTransform();
             option.RenderTransform = tr;
-            tr.BeginAnimation(TranslateTransform.YProperty, da);
+            tr.BeginAnimation(TranslateTransform.XProperty, da);
         }
     }
 }

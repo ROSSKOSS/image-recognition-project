@@ -29,8 +29,12 @@ namespace UIElements
         public Brush ForegroundHoverColor { get; set; }
         public Brush ForegroundDownColor { get; set; }
 
-        private BrushConverter _brushConverter;
+        protected BrushConverter _brushConverter;
 
+        public Button()
+        {
+            
+        }
         public Button(double width, double height, int roundX, int roundY, string text, int textSize, string backgroundHex, string hoverHex, string downHex, string foregroundHex, string foregroundHoverHex, string foregroundDownHex)
         {
             _brushConverter = new BrushConverter();
@@ -60,16 +64,16 @@ namespace UIElements
         private void MouseUpMethod(object sender, MouseButtonEventArgs e)
         {
             ChangeColor(HoverColor);
-            ChangeForegroundColor(HoverForeColor);
+           // ChangeForegroundColor(HoverForeColor);
         }
 
         private void MouseLeaveMethod(object sender, MouseEventArgs e)
         {
             ChangeColor(BGColor);
-            ChangeForegroundColor(ForeColor);
+           // ChangeForegroundColor(ForeColor);
         }
 
-        private void ChangeColor(Color to)
+        protected void ChangeColor(Color to)
         {
             ColorAnimation animation;
             animation = new ColorAnimation();
@@ -79,7 +83,7 @@ namespace UIElements
             Body.Fill.BeginAnimation(SolidColorBrush.ColorProperty, animation);
         }
 
-        private void ChangeForegroundColor(Color to)
+        protected void ChangeForegroundColor(Color to)
         {
             ColorAnimation animation;
             animation = new ColorAnimation();
@@ -92,16 +96,16 @@ namespace UIElements
         private void MouseDownMethod(object sender, MouseButtonEventArgs e)
         {
             Body.Fill = DownColor;
-            Content.Foreground = ForegroundDownColor;
+           // Content.Foreground = ForegroundDownColor;
         }
 
         private void MouseEnterMethod(object sender, MouseEventArgs e)
         {
             ChangeColor(HoverColor);
-            ChangeForegroundColor(HoverForeColor);
+           // ChangeForegroundColor(HoverForeColor);
         }
 
-        private void IntitalizeComponent()
+        protected void IntitalizeComponent()
         {
             var grid = new System.Windows.Controls.Grid()
             {
@@ -135,14 +139,14 @@ namespace UIElements
         {
             Content = new TextBlock()
             {
-                Width = ControlWidth,
-                Height = ControlHeight,
+                Width = Double.NaN,
+                Height = Double.NaN,
                 Foreground = ForegroundColor,
                 Background = null,
                 Text = Text,
-
+                Padding = new Thickness(0,0,0,2),
                 TextAlignment = TextAlignment.Center,
-
+                VerticalAlignment = VerticalAlignment.Center,
                 FontSize = TextSize,
                 FontFamily = new FontFamily("Malgun Gothic Semilight")
             };

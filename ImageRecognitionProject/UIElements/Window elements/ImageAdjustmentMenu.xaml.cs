@@ -15,7 +15,7 @@ namespace UIElements
         public Button ResetButton { get; set; }
         public Button ApplyButton { get; set; }
         public ImageSource TitleLogo { get; set; }
-        public StackPanel Host { get; set; }
+        public WrapPanel Host { get; set; }
         public string TitleText { get; set; }
         public DoubleAnimation OutroAnimation { get; set; }
 

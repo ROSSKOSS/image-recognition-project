@@ -13,6 +13,6 @@ namespace Utilities.Helpers
         public static Brush StartProcessColor = null;
         public static Brush MiscProcessColor = null;
         public static Brush EndProcessColor = null;
-
+        public static Brush TimeColor = null;
     }
 }
