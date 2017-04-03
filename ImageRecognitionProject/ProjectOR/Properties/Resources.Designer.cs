@@ -103,6 +103,26 @@ namespace ProjectOR.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap menuLogo {
+            get {
+                object obj = ResourceManager.GetObject("menuLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap recognitionLogo {
+            get {
+                object obj = ResourceManager.GetObject("recognitionLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap settingsLogo {
             get {
                 object obj = ResourceManager.GetObject("settingsLogo", resourceCulture);

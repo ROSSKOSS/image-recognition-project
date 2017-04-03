@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Bitmap\BitmapAdjustment.cs" />
     <Compile Include="Bitmap\BitmapConverter.cs" />
+    <Compile Include="Helpers\ButtonColors.cs" />
     <Compile Include="Helpers\Logger.cs" />
     <Compile Include="Helpers\LoggerColors.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

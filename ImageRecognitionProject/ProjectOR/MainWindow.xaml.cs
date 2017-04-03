@@ -10,6 +10,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using UIElements;
+using UIElements.Controls;
 using Utilities;
 using Utilities.Helpers;
 using Button = UIElements.Button;
@@ -56,8 +57,8 @@ namespace ProjectOR
             _logger.Report("Application started", LoggerColors.StartProcessColor, FontWeights.Medium);
 
             // Adding 'Add image' button to the Menu bar
-            var addImageButton = new UIElements.Button(Double.NaN, menuBar.Height - 10, 3, 3, "Add Image", 13, "#FF0288D1",
-                "#4fc3f7", "#0277bd", "#FFFFFFFF", "#FF000000", "#FFFFFFFF")
+            var addImageButton = new UIElements.Button(Double.NaN, menuBar.Height - 10, 3, 3, "Add Image", 13, ButtonColors.ButtonBackgroundColor,
+                ButtonColors.ButtonHoverColor, ButtonColors.ButtonDownColor, ButtonColors.ButtonForegroundColor, ButtonColors.ButtonForegroundHoverColor, ButtonColors.ButtonForegroundDownColor)
             {
                 Margin = new Thickness(10, 3, 3, 3),
             };
@@ -66,8 +67,8 @@ namespace ProjectOR
             menuBar.Children.Add(addImageButton);
 
             // Adding 'Help' button to the menu bar
-            var button = new UIElements.Button(Double.NaN, menuBar.Height - 10, 3, 3, $"Help", 13, "#FF0288D1",
-                "#4fc3f7", "#0277bd", "#FFFFFFFF", "#FF000000", "#FFFFFFFF")
+            var button = new UIElements.Button(Double.NaN, menuBar.Height - 10, 3, 3, $"Help", 13, ButtonColors.ButtonBackgroundColor,
+                ButtonColors.ButtonHoverColor, ButtonColors.ButtonDownColor, ButtonColors.ButtonForegroundColor, ButtonColors.ButtonForegroundHoverColor, ButtonColors.ButtonForegroundDownColor)
             {
                 Margin = new Thickness(5, 3, 3, 3),
             };
@@ -75,8 +76,8 @@ namespace ProjectOR
             menuBar.Children.Add(button);
 
             // Adding 'Logger' button to the menu bar
-            var logButton = new UIElements.Button(Double.NaN, menuBar.Height - 10, 3, 3, $"Log", 13, "#FF0288D1",
-                 "#4fc3f7", "#0277bd", "#FFFFFFFF", "#FF000000", "#FFFFFFFF")
+            var logButton = new UIElements.Button(Double.NaN, menuBar.Height - 10, 3, 3, $"Log", 13, ButtonColors.ButtonBackgroundColor,
+                ButtonColors.ButtonHoverColor, ButtonColors.ButtonDownColor, ButtonColors.ButtonForegroundColor, ButtonColors.ButtonForegroundHoverColor, ButtonColors.ButtonForegroundDownColor)
             {
                 Margin = new Thickness(5, 3, 3, 3),
             };
@@ -85,23 +86,7 @@ namespace ProjectOR
             menuBar.Children.Add(logButton);
         }
 
-        private void LogButtonMouseLeftButtonClick(object sender, MouseButtonEventArgs e)
-        {
-            if (_loggerHidden)
-            {
-                _logger.Report("Log displayed", LoggerColors.MiscProcessColor, FontWeights.Normal);
-                logBody.Visibility = Visibility.Visible;
-                LogRow.Height = new GridLength(204);
-                _loggerHidden = false;
-            }
-            else if (!_loggerHidden)
-            {
-                _logger.Report("Log hidden", LoggerColors.MiscProcessColor, FontWeights.Medium);
-                logBody.Visibility = Visibility.Hidden;
-                LogRow.Height = new GridLength(0);
-                _loggerHidden = true;
-            }
-        }
+
 
         // Event handler for 'Add image' button click event
         private void AddImageClick(object sender, MouseButtonEventArgs e)
@@ -115,7 +100,7 @@ namespace ProjectOR
             }
             catch (Exception ex)
             {
-                MessageBox.Show(" Image couldn't be set up.\nOriginal error:" + ex.Message);
+                MessageBox.Show("Image couldn't be set up.\nOriginal error:" + ex.Message);
                 return;
             }
             try
@@ -124,7 +109,7 @@ namespace ProjectOR
             }
             catch (Exception ex)
             {
-                MessageBox.Show(" Adjustment menu has thrown an exception. Check your image and try again.\nOriginal error:" + ex.Message);
+                MessageBox.Show("Adjustment menu has thrown an exception. Check your image and try again.\nOriginal error:" + ex.Message);
                 return;
             }
             label2.Content = null;
@@ -137,13 +122,12 @@ namespace ProjectOR
         {
             Bitmap sourceBmp = BitmapOpener.Open();
             _logger.Report("File located", LoggerColors.MiscProcessColor, FontWeights.Medium);
-            var element = new Image<Gray, Byte>(BitmapOpener.FilePath);
+            //var element = new Image<Gray, Byte>(BitmapOpener.FilePath);
 
-            Bitmap kekBmp = BitmapOpener.Open();
-            var scene = new Image<Gray, Byte>(BitmapOpener.FilePath);
 
-            imageDetailedView.Source =
-                BitmapConverter.ToImageSource(FeatureMatching.FeatureMatcher.Match(element, scene));
+
+            //imageDetailedView.Source =
+            //    BitmapConverter.ToImageSource(FeatureMatching.FeatureMatcher.Match(element, scene));
 
             var titleSource = BitmapConverter.ToImageSource(Properties.Resources.titleLogo);
             var bodySource = BitmapConverter.ToImageSource(sourceBmp);
@@ -156,7 +140,7 @@ namespace ProjectOR
 
             _logger.Report("Image loaded", LoggerColors.MiscProcessColor, FontWeights.Medium);
 
-            //  imageDetailedView.Source = BitmapConverter.ToImageSource(sourceBmp);
+            imageDetailedView.Source = BitmapConverter.ToImageSource(sourceBmp);
 
             imageDetailedView.Width = sourceBmp.Width;
             imageDetailedView.Height = sourceBmp.Height;
@@ -181,8 +165,8 @@ namespace ProjectOR
             var model = new List<Button>();
             Panel.SetZIndex(contextMenuHost, Int32.MaxValue);
 
-            var button = new UIElements.Button(150, 25, 0, 0, "Find on a scene", 14, "#FF0288D1",
-           "#FFFFFFFF", "#0277bd", "#FFFFFFFF", "#FF000000", "#FFFFFFFF")
+            var button = new UIElements.Button(150, 25, 0, 0, "Find on a scene", 14, ButtonColors.ButtonBackgroundColor,
+                ButtonColors.ButtonHoverColor, ButtonColors.ButtonDownColor, ButtonColors.ButtonForegroundColor, ButtonColors.ButtonForegroundHoverColor, ButtonColors.ButtonForegroundDownColor)
             {
                 Margin = new Thickness(0, 0, 0, 0)
             };
@@ -207,8 +191,8 @@ namespace ProjectOR
 
         private void SetUpAdjustmentMenu()
         {
-            var titleSource = BitmapConverter.ToImageSource(Properties.Resources.settingsLogo);
-            _adjustmentMenu = new ImageAdjustmentMenu("Image adjustment", titleSource)
+            var titleSource = BitmapConverter.ToImageSource(Properties.Resources.menuLogo);
+            _adjustmentMenu = new ImageAdjustmentMenu("Menu", titleSource)
             {
                 Width = 302,
                 Height = Double.NaN,
@@ -256,19 +240,86 @@ namespace ProjectOR
 
             //_trigger = new UIElements.Trigger();
             //_trigger.Width = 40;
-            //_trigger.Height = 20;
-            var trigger = new UIElements.Controls.TriggerButton(120, 50, 3, 3, "Increase Contrast", 13, "#FF0288D1",
-                 "#4fc3f7", "#0277bd", "#FFFFFFFF", "#FF000000", "#FFFFFFFF")
+            //_trigger.Height = 20;   
+            var titleSource = BitmapConverter.ToImageSource(Properties.Resources.settingsLogo);
+            var imageAdjustmentSubMenu = new UIElements.Controls.SubMenu("Image adjustment", titleSource)
             {
-                Margin = new Thickness(10, 10, 3, 3),
+                Margin = new Thickness(5, 10, 5, 3)
             };
-            
-           
-            
-            _adjustmentMenu.Host.Children.Add(trigger);
-           // trigger.Margin = new Thickness(20, 50, 10, 10);
+            titleSource = BitmapConverter.ToImageSource(Properties.Resources.recognitionLogo);
+            var imageRecognitionSubMenu = new UIElements.Controls.SubMenu("Image recognition", titleSource)
+            {
+                Margin = new Thickness(5, 10, 5, 3)
+            };
+            _adjustmentMenu.Host.Children.Add(imageAdjustmentSubMenu);
+            _adjustmentMenu.Host.Children.Add(imageRecognitionSubMenu);
+
+            var openCvObjectDetectionTrigger = new UIElements.Button(100, 50, 3, 3, "Open CV object\ndetection", 13, ButtonColors.ButtonBackgroundColor,
+                ButtonColors.ButtonHoverColor, ButtonColors.ButtonDownColor, ButtonColors.ButtonForegroundColor, ButtonColors.ButtonForegroundHoverColor, ButtonColors.ButtonForegroundDownColor)
+            {
+                Margin = new Thickness(5, 5, 5, 5)
+
+            };
+            imageRecognitionSubMenu.Container.Children.Add(openCvObjectDetectionTrigger);
+            openCvObjectDetectionTrigger.MouseLeftButtonUp += openCvObjectDetectionTrigger_MouseLeftButtonUp;
+
+            var contrastIncreaseTrigger = new UIElements.Controls.TriggerButton(80, 50, 3, 3, "Increase\nContrast", 13, ButtonColors.ButtonBackgroundColor,
+                ButtonColors.ButtonHoverColor, ButtonColors.ButtonDownColor, ButtonColors.ButtonForegroundColor, ButtonColors.ButtonForegroundHoverColor, ButtonColors.ButtonForegroundDownColor)
+            {
+                Margin = new Thickness(5, 5, 5, 5),
+            };
+            contrastIncreaseTrigger.MouseLeftButtonUp += contrastIncreaseTrigger_MouseLeftButtonUp;
+            imageAdjustmentSubMenu.Container.Children.Add(contrastIncreaseTrigger);
+
+
+            var binarizeTrigger = new UIElements.Button(80, 50, 3, 3, "Binarize\nimage", 13, ButtonColors.ButtonBackgroundColor,
+                ButtonColors.ButtonHoverColor, ButtonColors.ButtonDownColor, ButtonColors.ButtonForegroundColor, ButtonColors.ButtonForegroundHoverColor, ButtonColors.ButtonForegroundDownColor)
+            {
+                Margin = new Thickness(0, 5, 5, 5),
+            };
+            binarizeTrigger.MouseLeftButtonUp += binarizeTrigger_MouseLeftButtonUp;
+            imageAdjustmentSubMenu.Container.Children.Add(binarizeTrigger);
+
+            // trigger.Margin = new Thickness(20, 50, 10, 10);
             //blckAndWhite.Host.Children.Add(_trigger);
             //_trigger.MouseLeftButtonUp += TriggerTriggered;
+        }
+
+        private void contrastIncreaseTrigger_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            _tempBitmap = BitmapAdjustment.ContrastAdjustment(_tempBitmap, 15.0f);
+            imageDetailedView.Source = BitmapConverter.ToImageSource(_tempBitmap);
+        }
+
+        private void binarizeTrigger_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+           
+                var threadOne = new BackgroundWorker();
+                threadOne.WorkerReportsProgress = true;
+                threadOne.WorkerSupportsCancellation = true;
+                threadOne.DoWork += new BitmapAdjustment().CollectColorsFromBitmap;
+                threadOne.ProgressChanged += CollectColorsProgressChanged;
+                threadOne.RunWorkerCompleted += CollectColorsCompleted;
+                threadOne.RunWorkerAsync(_tempBitmap);
+                _logger.Report("Collecting colors", LoggerColors.StartProcessColor, FontWeights.Medium);
+               
+           
+        }
+
+        private void openCvObjectDetectionTrigger_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            try
+            {
+                var element = new Image<Gray, Byte>(BitmapOpener.FilePath);
+                Bitmap kekBmp = BitmapOpener.Open();
+                var scene = new Image<Gray, Byte>(BitmapOpener.FilePath);
+                imageDetailedView.Source =
+                    BitmapConverter.ToImageSource(FeatureMatching.FeatureMatcher.Match(element, scene));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Open CV has thrown an exception. Check your image and try again.\nOriginal error:" + ex.Message);
+            }
         }
 
         #region Binarize image
@@ -362,5 +413,23 @@ namespace ProjectOR
         }
 
         #endregion Context menu closing actions
+
+        private void LogButtonMouseLeftButtonClick(object sender, MouseButtonEventArgs e)
+        {
+            if (_loggerHidden)
+            {
+                _logger.Report("Log displayed", LoggerColors.MiscProcessColor, FontWeights.Normal);
+                logBody.Visibility = Visibility.Visible;
+                LogRow.Height = new GridLength(204);
+                _loggerHidden = false;
+            }
+            else if (!_loggerHidden)
+            {
+                _logger.Report("Log hidden", LoggerColors.MiscProcessColor, FontWeights.Medium);
+                logBody.Visibility = Visibility.Hidden;
+                LogRow.Height = new GridLength(0);
+                _loggerHidden = true;
+            }
+        }
     }
 }

@@ -46,3 +46,5 @@ C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIEleme
 C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\obj\Debug\Window elements\ContextMenu.baml
 C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\obj\Debug\Window elements\ImageDisplay.baml
 C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\obj\Debug\Controls\Trigger.baml
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\obj\Debug\Controls\SubMenu.g.cs
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\obj\Debug\Controls\SubMenu.baml

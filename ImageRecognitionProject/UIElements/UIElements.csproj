@@ -51,6 +51,9 @@
     <Compile Include="Controls\BlackAndWhiteControl.xaml.cs">
       <DependentUpon>BlackAndWhiteControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\SubMenu.xaml.cs">
+      <DependentUpon>SubMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\TriggerButton.cs" />
     <Compile Include="Window elements\ImageAdjustmentMenu.xaml.cs">
       <DependentUpon>ImageAdjustmentMenu.xaml</DependentUpon>
@@ -78,6 +81,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\BlackAndWhiteControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SubMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

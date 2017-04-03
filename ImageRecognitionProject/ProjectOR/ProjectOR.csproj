@@ -129,9 +129,6 @@
     <None Include="Resources\imageDisplayImage.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\titleLogo.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\ic_settings_input_component_black_48dp.png" />
   </ItemGroup>
   <ItemGroup>
@@ -144,10 +141,16 @@
     <None Include="Resources\ic_settings_brightness_black_48dp.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ic_tune_black_48dp.png" />
+    <None Include="Resources\ic_filter_b_and_w_black_48dp.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ic_filter_b_and_w_black_48dp.png" />
+    <None Include="Resources\ic_menu_black_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\titleLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_remove_red_eye_black_48dp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

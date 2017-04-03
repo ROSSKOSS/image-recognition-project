@@ -23,9 +23,9 @@
                 <RectangleGeometry Rect="0,-5,302,35" />
             </Rectangle.Clip>
         </Rectangle>
-        <Label x:Name="titleLabel" Content="Image" Margin="30,3,10,0" VerticalAlignment="Top" Padding="5,4,5,5" Height="25" Foreground="White" FontFamily="Malgun Gothic Semilight" Grid.ColumnSpan="2" />
+        <Label x:Name="titleLabel" Content="Image" Margin="30,3,29,0" VerticalAlignment="Top" Padding="5,4,5,5" Height="25" Foreground="White" FontFamily="Malgun Gothic Semilight" Grid.ColumnSpan="2" />
         <Image x:Name="image" HorizontalAlignment="Left" Height="19" Margin="7,5,0,0" VerticalAlignment="Top" Width="18"  Stretch="UniformToFill" />
-        <Image x:Name="sourceImage" Height="113" Margin="10,10,10,0" Grid.Row="1" VerticalAlignment="Top">
+        <Image x:Name="sourceImage" Height="113" Margin="10,10,10,0" Grid.Row="1" VerticalAlignment="Top" Stretch="UniformToFill">
             <Image.Clip>
                 <RectangleGeometry Rect="0,0,113,113" RadiusX="56" RadiusY="56" />
             </Image.Clip>
