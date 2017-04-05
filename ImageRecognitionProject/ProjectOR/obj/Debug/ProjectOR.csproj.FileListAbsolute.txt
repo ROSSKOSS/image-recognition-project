@@ -48,3 +48,5 @@ C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\Project
 C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\Emgu.CV.World.xml
 C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\ZedGraph.xml
 C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\zh-CN\ZedGraph.resources.dll
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\LocalBinaryPattern.dll
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\LocalBinaryPattern.pdb

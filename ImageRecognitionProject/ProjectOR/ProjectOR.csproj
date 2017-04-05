@@ -112,6 +112,10 @@
       <Project>{f546ee43-f214-41c0-84fd-1a3c0a10724a}</Project>
       <Name>FileOpener</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LocalBinaryPattern\LocalBinaryPattern.csproj">
+      <Project>{6bdbe66a-c0dc-4e93-8c18-4b019f747d4b}</Project>
+      <Name>LocalBinaryPattern</Name>
+    </ProjectReference>
     <ProjectReference Include="..\UIElements\UIElements.csproj">
       <Project>{748c9d3c-6167-4a2c-ad13-34b9265f4098}</Project>
       <Name>UIElements</Name>

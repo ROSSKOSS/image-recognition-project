@@ -6,7 +6,7 @@
 
         x:Class="ProjectOR.MainWindow"
         mc:Ignorable="d"
-        Title="Project. OR" Height="720" Width="1280" WindowStartupLocation="CenterScreen">
+        Title="Project. OR" Height="720" Width="1280" WindowStartupLocation="CenterScreen" KeyUp="Window_KeyUp">
     <Grid x:Name="Father" Background="White" MouseLeftButtonUp="Father_MouseLeftButtonUp">
         <Grid.RowDefinitions>
             <RowDefinition Height="30" />
@@ -45,6 +45,7 @@
                 <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
                     <Image x:Name="imageDetailedView" Height="406" />
                 </ScrollViewer>
+
             </Grid>
             <ScrollViewer x:Name="logBody" Grid.Row="1" Visibility="Hidden" Background="#FF727272">
                 <RichTextBox x:Name="log" FontSize="12" BorderThickness="0" Block.LineHeight="2" Background="Black">
@@ -55,6 +56,7 @@
                     </FlowDocument>
                 </RichTextBox>
             </ScrollViewer>
+            <Polygon x:Name="histogram" Stroke="Black" Fill="#FF4FC3F7" Stretch="Fill" Height="341" VerticalAlignment="Bottom"/>
         </Grid>
         <Grid Height="23" VerticalAlignment="Top" Grid.ColumnSpan="2">
             <StackPanel x:Name="menuBar" Height="30" VerticalAlignment="Top" Background="#FF0288D1" Orientation="Horizontal" Margin="0,0,0,-7" />

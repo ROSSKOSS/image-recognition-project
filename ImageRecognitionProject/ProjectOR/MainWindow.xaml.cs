@@ -1,10 +1,12 @@
 ﻿using Emgu.CV;
 using Emgu.CV.Structure;
 using FileOpener;
+using LocalBinaryPattern;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -26,10 +28,11 @@ namespace ProjectOR
         #region private variables
 
         private ImageDisplay _imgDisplay;
+        public static System.Windows.Controls.Image ImageDisplay { get; set; }
 
         // Describes current Context menu state
         private bool _contextMenuOpened = false;
-
+        private List<int> valuesFromBitmap;
         private ImageAdjustmentMenu _adjustmentMenu;
         private Bitmap initialBitmap;
         private Bitmap _sourceImage;
@@ -37,15 +40,18 @@ namespace ProjectOR
         private UIElements.Trigger _trigger;
         public RichTextBox Log { get; set; }
         private Logger _logger;
-
+        public static ProgressBar ProgressDisplay { get; set; }
         // Describes current logger state
         private bool _loggerHidden = true;
-
+        public System.Windows.Shapes.Polygon Histogram { get; set; }
         #endregion private variables
 
         public MainWindow()
         {
             InitializeComponent();
+            ProgressDisplay = progressBar;
+            ImageDisplay = imageDetailedView;
+            Histogram = histogram;
             LogRow.Height = new GridLength(0);
             Log = log;
             Log.Document.Blocks.Clear();
@@ -126,6 +132,7 @@ namespace ProjectOR
 
 
 
+
             //imageDetailedView.Source =
             //    BitmapConverter.ToImageSource(FeatureMatching.FeatureMatcher.Match(element, scene));
 
@@ -158,6 +165,7 @@ namespace ProjectOR
             imageGrid.Children.Clear();
             imageDetailedView.Source = null;
             _adjustmentMenu.DoOutroAnimation();
+            histogram.Points = null;
         }
 
         private void ImgDisplayRightMouseUp(object sender, MouseButtonEventArgs e)
@@ -280,9 +288,101 @@ namespace ProjectOR
             binarizeTrigger.MouseLeftButtonUp += binarizeTrigger_MouseLeftButtonUp;
             imageAdjustmentSubMenu.Container.Children.Add(binarizeTrigger);
 
+            var grayscaleTrigger = new UIElements.Button(80, 50, 3, 3, "Convert to\ngrayscale", 13, ButtonColors.ButtonBackgroundColor,
+               ButtonColors.ButtonHoverColor, ButtonColors.ButtonDownColor, ButtonColors.ButtonForegroundColor, ButtonColors.ButtonForegroundHoverColor, ButtonColors.ButtonForegroundDownColor)
+            {
+                Margin = new Thickness(0, 5, 5, 5),
+            };
+            grayscaleTrigger.MouseLeftButtonUp += GrayscaleTrigger_MouseLeftButtonUp;
+            imageAdjustmentSubMenu.Container.Children.Add(grayscaleTrigger);
+            var buildHistogram = new UIElements.Button(80, 50, 3, 3, "Build\nhistogram", 13, ButtonColors.ButtonBackgroundColor,
+             ButtonColors.ButtonHoverColor, ButtonColors.ButtonDownColor, ButtonColors.ButtonForegroundColor, ButtonColors.ButtonForegroundHoverColor, ButtonColors.ButtonForegroundDownColor)
+            {
+                Margin = new Thickness(5, 0, 5, 5),
+            };
+            buildHistogram.MouseLeftButtonUp += buildHistogram_MouseLeftButtonUp;
+            imageAdjustmentSubMenu.Container.Children.Add(buildHistogram);
+
             // trigger.Margin = new Thickness(20, 50, 10, 10);
             //blckAndWhite.Host.Children.Add(_trigger);
             //_trigger.MouseLeftButtonUp += TriggerTriggered;
+        }
+
+        private void buildHistogram_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            Grid.SetZIndex(histogram, Int32.MaxValue);
+            new Histogram().CreateValuesDictionary(valuesFromBitmap, ProgressDisplay, Histogram);
+        }
+
+        private void GrayscaleTrigger_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            var threadOne = new BackgroundWorker();
+            threadOne.WorkerReportsProgress = true;
+            threadOne.WorkerSupportsCancellation = true;
+            threadOne.DoWork += new LBP().GrayScale;
+            threadOne.ProgressChanged += GrayscaleProgressChanged;
+            threadOne.RunWorkerCompleted += GrayscaleCompleted;
+            threadOne.RunWorkerAsync(_tempBitmap);
+            _logger.Report("Converting image to grayscale.", LoggerColors.StartProcessColor, FontWeights.Medium);
+
+        }
+
+        private void GrayscaleCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            imageDetailedView.Source = BitmapConverter.ToImageSource((Bitmap)e.Result);
+            _tempBitmap = (Bitmap)e.Result;
+            progressBar.Value = 0;
+
+            var threadOne = new BackgroundWorker();
+            threadOne.WorkerReportsProgress = true;
+            threadOne.WorkerSupportsCancellation = true;
+            threadOne.DoWork += new LBP().Calculate;
+            threadOne.ProgressChanged += CalculateLBPProgressChanged;
+            threadOne.RunWorkerCompleted += CalculateLBPCompleted;
+            threadOne.RunWorkerAsync(_tempBitmap);
+            _logger.Report("Calculating LBP.", LoggerColors.StartProcessColor, FontWeights.Medium);
+
+
+
+        }
+
+        private void CalculateLBPCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            progressBar.Value = 0;
+            var result = (List<int[,]>)e.Result;
+            List<string> binaryValues = new List<string>();
+            foreach (var array in result)
+            {
+                string binary = String.Empty;
+                binary += array[0, 0];
+                binary += array[0, 1];
+                binary += array[0, 2];
+                binary += array[1, 2];
+                binary += array[2, 2];
+                binary += array[2, 1];
+                binary += array[2, 0];
+                binary += array[1, 0];
+                binaryValues.Add(binary);
+            }
+
+            var resultValues = new List<int>();
+            foreach (var item in binaryValues)
+            {
+                resultValues.Add(Convert.ToInt32(item, 2));
+            }
+            var distinct = resultValues.Distinct().ToList();
+            valuesFromBitmap = resultValues;
+            _logger.Report("Calculating LBP finished.", LoggerColors.EndProcessColor, FontWeights.Medium);
+        }
+
+        private void CalculateLBPProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            progressBar.Value = e.ProgressPercentage;
+        }
+
+        private void GrayscaleProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            progressBar.Value = e.ProgressPercentage;
         }
 
         private void contrastIncreaseTrigger_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -293,17 +393,17 @@ namespace ProjectOR
 
         private void binarizeTrigger_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-           
-                var threadOne = new BackgroundWorker();
-                threadOne.WorkerReportsProgress = true;
-                threadOne.WorkerSupportsCancellation = true;
-                threadOne.DoWork += new BitmapAdjustment().CollectColorsFromBitmap;
-                threadOne.ProgressChanged += CollectColorsProgressChanged;
-                threadOne.RunWorkerCompleted += CollectColorsCompleted;
-                threadOne.RunWorkerAsync(_tempBitmap);
-                _logger.Report("Collecting colors", LoggerColors.StartProcessColor, FontWeights.Medium);
-               
-           
+
+            var threadOne = new BackgroundWorker();
+            threadOne.WorkerReportsProgress = true;
+            threadOne.WorkerSupportsCancellation = true;
+            threadOne.DoWork += new BitmapAdjustment().CollectColorsFromBitmap;
+            threadOne.ProgressChanged += CollectColorsProgressChanged;
+            threadOne.RunWorkerCompleted += CollectColorsCompleted;
+            threadOne.RunWorkerAsync(_tempBitmap);
+            _logger.Report("Collecting colors", LoggerColors.StartProcessColor, FontWeights.Medium);
+
+
         }
 
         private void openCvObjectDetectionTrigger_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -429,6 +529,23 @@ namespace ProjectOR
                 logBody.Visibility = Visibility.Hidden;
                 LogRow.Height = new GridLength(0);
                 _loggerHidden = true;
+            }
+        }
+
+        private void Window_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.F11)
+            {
+                if (WindowState == WindowState.Maximized)
+                {
+                    WindowStyle = WindowStyle.SingleBorderWindow;
+                    WindowState = WindowState.Normal;
+                }
+                else
+                {
+                    WindowStyle = WindowStyle.None;
+                    WindowState = WindowState.Maximized;
+                }
             }
         }
     }

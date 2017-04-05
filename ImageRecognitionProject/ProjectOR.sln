@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileOpener", "..\..\..\Visu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeatureMatching", "..\..\..\..\..\..\Emgu\emgucv-windesktop 3.1.0.2504\Emgu.CV.Example\FeatureMatching\FeatureMatching.csproj", "{56AFFD9E-A27E-43BA-AAB5-8FEED098384D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalBinaryPattern", "LocalBinaryPattern\LocalBinaryPattern.csproj", "{6BDBE66A-C0DC-4E93-8C18-4B019F747D4B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{56AFFD9E-A27E-43BA-AAB5-8FEED098384D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56AFFD9E-A27E-43BA-AAB5-8FEED098384D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56AFFD9E-A27E-43BA-AAB5-8FEED098384D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BDBE66A-C0DC-4E93-8C18-4B019F747D4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BDBE66A-C0DC-4E93-8C18-4B019F747D4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BDBE66A-C0DC-4E93-8C18-4B019F747D4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BDBE66A-C0DC-4E93-8C18-4B019F747D4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

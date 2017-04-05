@@ -1,0 +1,5 @@
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\LocalBinaryPattern\bin\Debug\LocalBinaryPattern.dll
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\LocalBinaryPattern\bin\Debug\LocalBinaryPattern.pdb
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\LocalBinaryPattern\obj\Debug\LocalBinaryPattern.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\LocalBinaryPattern\obj\Debug\LocalBinaryPattern.dll
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\LocalBinaryPattern\obj\Debug\LocalBinaryPattern.pdb
