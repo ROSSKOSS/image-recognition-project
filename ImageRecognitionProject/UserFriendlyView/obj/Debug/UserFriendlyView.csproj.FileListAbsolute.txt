@@ -1,0 +1,14 @@
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UserFriendlyView\bin\Debug\UserFriendlyView.exe.config
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UserFriendlyView\bin\Debug\UserFriendlyView.exe
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UserFriendlyView\bin\Debug\UserFriendlyView.pdb
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UserFriendlyView\obj\Debug\UserFriendlyView.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UserFriendlyView\obj\Debug\MainWindow.g.cs
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UserFriendlyView\obj\Debug\App.g.cs
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UserFriendlyView\obj\Debug\UserFriendlyView_MarkupCompile.cache
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UserFriendlyView\obj\Debug\UserFriendlyView_MarkupCompile.lref
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UserFriendlyView\obj\Debug\MainWindow.baml
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UserFriendlyView\obj\Debug\UserFriendlyView.g.resources
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UserFriendlyView\obj\Debug\UserFriendlyView.Properties.Resources.resources
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UserFriendlyView\obj\Debug\UserFriendlyView.csproj.GenerateResource.Cache
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UserFriendlyView\obj\Debug\UserFriendlyView.exe
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UserFriendlyView\obj\Debug\UserFriendlyView.pdb

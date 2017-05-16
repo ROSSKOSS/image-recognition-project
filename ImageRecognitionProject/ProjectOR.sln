@@ -15,6 +15,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeatureMatching", "..\..\..
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalBinaryPattern", "LocalBinaryPattern\LocalBinaryPattern.csproj", "{6BDBE66A-C0DC-4E93-8C18-4B019F747D4B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProjectWindows", "ProjectWindows", "{03A4CCD9-2548-4725-B4EB-BEA8C160DD9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HistogramDisplayWindow", "HistogramDisplayWindow\HistogramDisplayWindow.csproj", "{C70023F8-9698-436F-BDB9-BBAB1C925E62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserFriendlyView", "UserFriendlyView\UserFriendlyView.csproj", "{DA026A0A-92C4-45C9-8FCC-33E674D31C63}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,8 +51,19 @@ Global
 		{6BDBE66A-C0DC-4E93-8C18-4B019F747D4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BDBE66A-C0DC-4E93-8C18-4B019F747D4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BDBE66A-C0DC-4E93-8C18-4B019F747D4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C70023F8-9698-436F-BDB9-BBAB1C925E62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C70023F8-9698-436F-BDB9-BBAB1C925E62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C70023F8-9698-436F-BDB9-BBAB1C925E62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C70023F8-9698-436F-BDB9-BBAB1C925E62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA026A0A-92C4-45C9-8FCC-33E674D31C63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA026A0A-92C4-45C9-8FCC-33E674D31C63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA026A0A-92C4-45C9-8FCC-33E674D31C63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA026A0A-92C4-45C9-8FCC-33E674D31C63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C70023F8-9698-436F-BDB9-BBAB1C925E62} = {03A4CCD9-2548-4725-B4EB-BEA8C160DD9C}
 	EndGlobalSection
 EndGlobal

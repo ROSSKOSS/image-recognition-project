@@ -3,3 +3,13 @@ C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\LocalBi
 C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\LocalBinaryPattern\obj\Debug\LocalBinaryPattern.csprojResolveAssemblyReference.cache
 C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\LocalBinaryPattern\obj\Debug\LocalBinaryPattern.dll
 C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\LocalBinaryPattern\obj\Debug\LocalBinaryPattern.pdb
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\LocalBinaryPattern\bin\Debug\Utilities.dll
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\LocalBinaryPattern\bin\Debug\Utilities.pdb
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\LocalBinaryPattern\bin\Debug\HistogramDisplayWindow.exe
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\LocalBinaryPattern\bin\Debug\HistogramDisplayWindow.pdb
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\LocalBinaryPattern\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\LocalBinaryPattern\bin\Debug\LiveCharts.dll
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\LocalBinaryPattern\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\LocalBinaryPattern\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\LocalBinaryPattern\bin\Debug\LiveCharts.pdb
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\LocalBinaryPattern\bin\Debug\LiveCharts.xml

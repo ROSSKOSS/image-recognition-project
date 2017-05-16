@@ -8,3 +8,11 @@ C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\Utiliti
 C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\Utilities\obj\Debug\Utilities.csprojResolveAssemblyReference.cache
 C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\Utilities\obj\Debug\Utilities.dll
 C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\Utilities\obj\Debug\Utilities.pdb
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\Utilities\bin\Debug\HistogramDisplayWindow.exe
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\Utilities\bin\Debug\HistogramDisplayWindow.pdb
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\Utilities\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\Utilities\bin\Debug\LiveCharts.dll
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\Utilities\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\Utilities\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\Utilities\bin\Debug\LiveCharts.pdb
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\Utilities\bin\Debug\LiveCharts.xml

@@ -48,3 +48,11 @@ C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIEleme
 C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\obj\Debug\Controls\Trigger.baml
 C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\obj\Debug\Controls\SubMenu.g.cs
 C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\obj\Debug\Controls\SubMenu.baml
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\bin\Debug\HistogramDisplayWindow.exe
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\bin\Debug\HistogramDisplayWindow.pdb
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\bin\Debug\LiveCharts.dll
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\bin\Debug\LiveCharts.pdb
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\UIElements\bin\Debug\LiveCharts.xml

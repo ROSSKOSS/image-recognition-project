@@ -1,0 +1,19 @@
+﻿<Window x:Class="HistogramDisplayWindow.LbpHistogramWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HistogramDisplayWindow"
+        xmlns:wpf="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        mc:Ignorable="d"
+        Title="LbpHistogramWindow" Height="656.725" Width="1109.005">
+    <Grid Background="#FF03A9F4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Margin="0,0,0.005,-0.275">
+            <wpf:CartesianChart x:Name="histogram" Background="White" Margin="10,10,10.095,9.725" DisableAnimations="True" Zoom="Xy" Pan="Xy" ScrollMode="XY" />
+        </Grid>
+       
+    </Grid>
+</Window>

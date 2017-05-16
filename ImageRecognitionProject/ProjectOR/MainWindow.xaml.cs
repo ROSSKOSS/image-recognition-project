@@ -31,10 +31,10 @@ namespace ProjectOR
         public static System.Windows.Controls.Image ImageDisplay { get; set; }
 
         // Describes current Context menu state
-        private bool _contextMenuOpened = false;
-        private List<int> valuesFromBitmap;
+        //private bool _contextMenuOpened = false;
+        public LbpDisplayWindow HistogramDisplay { get; set; }
+        private List<int> _valuesFromBitmap;
         private ImageAdjustmentMenu _adjustmentMenu;
-        private Bitmap initialBitmap;
         private Bitmap _sourceImage;
         private Bitmap _tempBitmap;
         private UIElements.Trigger _trigger;
@@ -54,6 +54,7 @@ namespace ProjectOR
             Histogram = histogram;
             LogRow.Height = new GridLength(0);
             Log = log;
+
             Log.Document.Blocks.Clear();
             LoggerColors.StartProcessColor = (System.Windows.Media.Brush)new BrushConverter().ConvertFrom("#FF08B800");
             LoggerColors.MiscProcessColor = (System.Windows.Media.Brush)new BrushConverter().ConvertFrom("#FF818181");
@@ -63,6 +64,11 @@ namespace ProjectOR
             _logger.Report("Application started", LoggerColors.StartProcessColor, FontWeights.Medium);
 
             // Adding 'Add image' button to the Menu bar
+            AddMenuButtons();
+        }
+
+        private void AddMenuButtons()
+        {
             var addImageButton = new UIElements.Button(Double.NaN, menuBar.Height - 10, 3, 3, "Add Image", 13, ButtonColors.ButtonBackgroundColor,
                 ButtonColors.ButtonHoverColor, ButtonColors.ButtonDownColor, ButtonColors.ButtonForegroundColor, ButtonColors.ButtonForegroundHoverColor, ButtonColors.ButtonForegroundDownColor)
             {
@@ -91,8 +97,6 @@ namespace ProjectOR
             logButton.MouseLeftButtonUp += LogButtonMouseLeftButtonClick;
             menuBar.Children.Add(logButton);
         }
-
-
 
         // Event handler for 'Add image' button click event
         private void AddImageClick(object sender, MouseButtonEventArgs e)
@@ -232,7 +236,7 @@ namespace ProjectOR
 
         #endregion Adjustment menu
 
-        #region Filling the adjustment menu
+        #region Filling the adjustment menu, LBP is here
 
         private void SetUpAdjustmentControls()
         {
@@ -311,7 +315,7 @@ namespace ProjectOR
         private void buildHistogram_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             Grid.SetZIndex(histogram, Int32.MaxValue);
-            new Histogram().CreateValuesDictionary(valuesFromBitmap, ProgressDisplay, Histogram);
+            new Histogram().CreateValuesDictionary(_valuesFromBitmap, _sourceImage, ProgressDisplay, Histogram);
         }
 
         private void GrayscaleTrigger_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -350,28 +354,13 @@ namespace ProjectOR
         {
             progressBar.Value = 0;
             var result = (List<int[,]>)e.Result;
-            List<string> binaryValues = new List<string>();
+            var resultValues = new List<int>();
             foreach (var array in result)
             {
-                string binary = String.Empty;
-                binary += array[0, 0];
-                binary += array[0, 1];
-                binary += array[0, 2];
-                binary += array[1, 2];
-                binary += array[2, 2];
-                binary += array[2, 1];
-                binary += array[2, 0];
-                binary += array[1, 0];
-                binaryValues.Add(binary);
-            }
-
-            var resultValues = new List<int>();
-            foreach (var item in binaryValues)
-            {
-                resultValues.Add(Convert.ToInt32(item, 2));
+                resultValues.Add(NumberConverter.LbpArrayToDecimal(array));
             }
             var distinct = resultValues.Distinct().ToList();
-            valuesFromBitmap = resultValues;
+            _valuesFromBitmap = resultValues;
             _logger.Report("Calculating LBP finished.", LoggerColors.EndProcessColor, FontWeights.Medium);
         }
 
@@ -547,6 +536,23 @@ namespace ProjectOR
                     WindowState = WindowState.Maximized;
                 }
             }
+        }
+
+        private void imageDetailedView_MouseWheel(object sender, MouseWheelEventArgs e)
+        {
+
+            var matrix = imageDetailedView.LayoutTransform.Value;
+
+            if (e.Delta > 0)
+            {
+                matrix.ScaleAt(1.5, 1.5, e.GetPosition(ImageDisplayScrollView).X, e.GetPosition(ImageDisplayScrollView).Y);
+            }
+            else
+            {
+                matrix.ScaleAt(1.0 / 1.5, 1.0 / 1.5, e.GetPosition(ImageDisplayScrollView).X, e.GetPosition(ImageDisplayScrollView).Y);
+            }
+
+            imageDetailedView.LayoutTransform = new MatrixTransform(matrix);
         }
     }
 }

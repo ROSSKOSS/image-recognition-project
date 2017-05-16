@@ -41,9 +41,10 @@
                 <RowDefinition x:Name="LogRow" Height="204" />
             </Grid.RowDefinitions>
             <Grid Background="#FF0277BD">
+                
                 <Label x:Name="label2" Content="Nothing to display" Margin="0,0,0,0" Foreground="#FF03A9F4" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-                    <Image x:Name="imageDetailedView" Height="406" />
+                <ScrollViewer x:Name="ImageDisplayScrollView" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                    <Image x:Name="imageDetailedView" Height="406" ScrollViewer.HorizontalScrollBarVisibility="Visible" MouseWheel="imageDetailedView_MouseWheel"/>
                 </ScrollViewer>
 
             </Grid>
@@ -56,7 +57,11 @@
                     </FlowDocument>
                 </RichTextBox>
             </ScrollViewer>
-            <Polygon x:Name="histogram" Stroke="Black" Fill="#FF4FC3F7" Stretch="Fill" Height="341" VerticalAlignment="Bottom"/>
+            <Polygon x:Name="histogram" Stroke="#FF03A9F4" Stretch="Fill" Height="341" VerticalAlignment="Bottom">
+                <Polygon.Fill>
+                    <SolidColorBrush Color="#FFACE5FF" Opacity="0.5"/>
+                </Polygon.Fill>
+            </Polygon>
         </Grid>
         <Grid Height="23" VerticalAlignment="Top" Grid.ColumnSpan="2">
             <StackPanel x:Name="menuBar" Height="30" VerticalAlignment="Top" Background="#FF0288D1" Orientation="Horizontal" Margin="0,0,0,-7" />

@@ -50,3 +50,14 @@ C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\Project
 C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\zh-CN\ZedGraph.resources.dll
 C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\LocalBinaryPattern.dll
 C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\LocalBinaryPattern.pdb
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\obj\Debug\LbpDisplayWindow.g.cs
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\obj\Debug\ProjectOR_MarkupCompile.lref
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\obj\Debug\LbpDisplayWindow.baml
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\HistogramDisplayWindow.exe
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\HistogramDisplayWindow.pdb
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\LiveCharts.dll
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\LiveCharts.pdb
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\LiveCharts.xml
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\User\Documents\Github\image-recognition\ImageRecognitionProject\ProjectOR\bin\Debug\LiveCharts.Wpf.xml

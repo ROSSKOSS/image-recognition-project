@@ -51,6 +51,7 @@
     <Compile Include="Controls\BlackAndWhiteControl.xaml.cs">
       <DependentUpon>BlackAndWhiteControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\MenuBarButton.cs" />
     <Compile Include="Controls\SubMenu.xaml.cs">
       <DependentUpon>SubMenu.xaml</DependentUpon>
     </Compile>

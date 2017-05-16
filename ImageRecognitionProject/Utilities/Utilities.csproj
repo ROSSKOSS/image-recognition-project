@@ -51,8 +51,15 @@
     <Compile Include="Helpers\ButtonColors.cs" />
     <Compile Include="Helpers\Logger.cs" />
     <Compile Include="Helpers\LoggerColors.cs" />
+    <Compile Include="Helpers\NumberConverter.cs" />
     <Compile Include="Histogram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HistogramDisplayWindow\HistogramDisplayWindow.csproj">
+      <Project>{C70023F8-9698-436F-BDB9-BBAB1C925E62}</Project>
+      <Name>HistogramDisplayWindow</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

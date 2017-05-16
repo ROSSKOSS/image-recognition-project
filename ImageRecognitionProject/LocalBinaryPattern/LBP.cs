@@ -14,6 +14,7 @@ namespace LocalBinaryPattern
         {
             var source = (Bitmap)e.Argument;
             int threshold = 0;
+           
             var result = new List<int[,]>();
             var array = new int[3, 3];
             var bg = sender as BackgroundWorker;
